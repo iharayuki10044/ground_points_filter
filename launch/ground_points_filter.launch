@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- <!&#45;&#45; -->
+    <arg name="TARGET_FRAME" default="base_link"/>
+    <!-- <arg name="TARGET_FRAME" default="lidar_link"/> -->
+    <arg name="store_num" default="10"/>
+
+    <node pkg="ground_points_filter" type="ground_points_filter" name="ground_points_filter" output="screen" >
+        <param name="TARGET_FRAME" value="$(arg TARGET_FRAME)"/>
+        <param name="ratio" value="0.6"/>
+        <param name="min_count" value="20"/>
+        <param name="store_num" value="5"/>
+        <param name="set_distance_thre" value="0.1"/>
+        <param name="leaf_size" value="0.4"/>
+    </node>
+     
+       <!-- <node pkg="rviz" type="rviz" name="rviz51" args="-d $(find velocity_points_mover)/config/ground_points_filter.rviz"/> -->
+</launch>
