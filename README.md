@@ -2,4 +2,4 @@
 
 for obstructive ground points
 
-special tanks shibuya
+special thanks shibuya
